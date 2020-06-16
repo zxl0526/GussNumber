@@ -56,5 +56,21 @@ public class GuessNumberTest {
         //then
         assertEquals("0A4B", result);
     }
+    //数字全对，位置有对有错（2A2B）
+    @Test
+    public void should_return_2A2B_input_1243() {
+        //given
+        String input = "1 2 4 3";
+        //when
+        String result = null;
+        try {
+            result = Game.playGame(input);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        //then
+        assertEquals("2A2B", result);
+    }
 
 }
