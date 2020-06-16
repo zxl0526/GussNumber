@@ -17,7 +17,7 @@ public class Game {
             for (int k = 0; k < answer.length; k++) {
                 if (result[i].equals(answer[k])) {
                     // 位置相等
-                    if (i == k) {
+                    if ( i == k) {
                         positionCountRight++;
                     } else {
                         // 只有值相等

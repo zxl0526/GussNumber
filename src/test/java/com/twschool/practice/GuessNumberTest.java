@@ -8,8 +8,6 @@ public class GuessNumberTest {
 
     //测试案例，假定"1234" 为答案（输出控制台）
 
-
-
     //位置和数字全对（4A0B）
     @Test
     public void should_return_4A0B_input_1234() {
@@ -42,6 +40,21 @@ public class GuessNumberTest {
         //then
         assertEquals("0A0B", result);
     }
-
+    //位置全错，数字全对（0A4B）
+    @Test
+    public void should_return_0A4B_input_4321() {
+        //given
+        String input = "4 3 2 1";
+        //when
+        String result = null;
+        try {
+            result = Game.playGame(input);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        //then
+        assertEquals("0A4B", result);
+    }
 
 }
