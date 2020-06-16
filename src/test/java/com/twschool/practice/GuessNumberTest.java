@@ -39,6 +39,17 @@ public class GuessNumberTest {
     public void should_return_1A2B_input_8324() {
         should_try_catch("8 3 2 4","1A2B");
     }
+    //错误情况验证
+    @Test
+   public void should_return_error_input_1123() {
+
+        should_try_catch("1 1 2 3","error");
+    }
+
+    @Test
+   public void should_return_error_input_12() {
+        should_try_catch("1 3","error");
+    }
     public void  should_try_catch(String input,String resultA){
 
         String result = null;
