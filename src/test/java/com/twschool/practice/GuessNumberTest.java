@@ -72,5 +72,21 @@ public class GuessNumberTest {
         //then
         assertEquals("2A2B", result);
     }
+    //位置全错，数字有对有错（0A2B）
+    @Test
+    public void should_return_0A2B_input_2178() {
+        //given
+        String input = "2 1 7 8";
+        //when
+        String result = null;
+        try {
+            result = Game.playGame(input);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        //then
+        assertEquals("0A2B", result);
+    }
 
 }
