@@ -88,5 +88,21 @@ public class GuessNumberTest {
         //then
         assertEquals("0A2B", result);
     }
+    //位置部分错，数字部分错（1A2B）
+    @Test
+    public void should_return_1A2B_input_8324() {
+        //given
+        String input = "8 3 2 4";
+        //when
+        String result = null;
+        try {
+            result = Game.playGame(input);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        //then
+        assertEquals("1A2B", result);
+    }
 
 }
